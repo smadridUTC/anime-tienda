@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<html>
-<head>
 <meta charset="ISO-8859-1">
 
 <title>TIENDA ANIME ONLINE</title>
@@ -94,15 +92,15 @@ $(document).ready(function(){
 
 <!-- 3.- mensaje tooltip al colocarse sobre un boton-->
 <script>
-jQuery("a").mouseenter(function (e) {             
-	    var posMouse = e.pageX - this.offsetLeft; 
-	    var textoTooltip = jQuery(this).attr("title"); 
-	             
-	    if (textoTooltip.length > 0) {
-	        jQuery(this).append('<div class="tooltip">' + textoTooltip + '</div>');
-	        jQuery("a > div.tooltip").css("left", "" + posMouse - 103 + "px");
-	        jQuery("a > div.tooltip").fadeIn(300);
-	    }
+jQuery("a").mouseenter(function (e) {Â Â Â Â Â Â Â Â Â Â Â Â  
+	Â Â Â Â var posMouse = e.pageX - this.offsetLeft; 
+	Â Â Â Â var textoTooltip = jQuery(this).attr("title"); 
+	Â Â Â Â Â Â Â Â Â Â Â Â Â 
+	Â Â Â Â if (textoTooltip.length > 0) {
+	Â Â Â Â Â Â Â Â jQuery(this).append('<div class="tooltip">' + textoTooltip + '</div>');
+	Â Â Â Â Â Â Â Â jQuery("a > div.tooltip").css("left", "" + posMouse - 103 + "px");
+	Â Â Â Â Â Â Â Â jQuery("a > div.tooltip").fadeIn(300);
+	Â Â Â Â }
 	});
 jQuery("a").mouseleave(function () {             
     jQuery("a > div.tooltip").fadeOut(300).delay(300).queue(function () {
@@ -158,7 +156,7 @@ $(document).ready(function(){
 </div>
 
 <div id="h2"> 
-<hgroup id="ta"> <h1>TIENDA &nbsp;&nbsp; AKATSUKI</h1> </hgroup>
+<hgroup id="ta"> <h1>TIENDA  &nbsp;&nbsp; AKATSUKI</h1> </hgroup>
 <div id="cambia"><h5>LO MEJOR EN ANIME...!!!</h5></div>
 </div>
 
@@ -312,7 +310,7 @@ class="tooltip_elemento center"><img src="usua.png"> <b>Iniciar sesion</b></butt
 <!-- ********************* inicio pie de pagina -->
 
 <div id="footer">
-Copyright © 2015 | Dario Tulmo | Derechos Reservados.
+Copyright Â© 2015 | Dario Tulmo | Derechos Reservados.
 <canvas id="myCanvas" width="5" height="5" style="border: 1px solid #c3c3c3;">
 </canvas>
 </div>
