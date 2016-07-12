@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+
+<title>TIENDA ANIME ONLINE</title>
+
+<!--LLAMADO A LOS ESTILOS EXTERNOS -->
+<link href="estilos.css" rel="stylesheet">
+<link href="estilos_zoom.css" rel="stylesheet">
+
+<!--LLAMADO A LA LIBRERIA JQUERY-->
+<script src="js/jquery-1.11.1.js"></script>
+
+<!--ESTILOS EMBEBIDOS-->
+<style>
+#header{
+background-color: black;
+font-family: Cambria;
+color: yellow;
+text-align: center;
+padding: 5px;
+width: 1333px;
+height: 140px;
+font-family: Cambria;
+font-size: 16px;
+}
+
+</style>
+<!-- FIN ESTILOS EMBEBIDOS-->
+
+<!-- ******************** FUNCIONES JSCRIPT  **********************-->
+
+<!-- ******************** FUNCIONES 1 **********************-->
+<script type="text/javascript">
+window.setInterval (cambio_color, 600);
+var color = "red";
+function cambio_color () {
+var cambia = document.getElementById ("cambia");
+color = (color == "#ffffff")? "red" : "#ffffff";
+cambia.style.color = color;
+cambia.style.fontSize='16px';
+}
+
+<!-- ******************** FUNCIONES 2 **********************-->
+function alerta() {
+    alert("<<< QUE TAL FANATIC@S DEL ANIME BIENVENIDOS >>>");
+}
+
+<!-- ******************** FUNCIONES 3 **********************-->
+function aviso() {
+    alert("<<< NO TIENES NINGUN ARTICULO COMPRADO >>>");
+}
+
+<!-- ******************** FUNCIONES 4 CAMBIA COLOR DE FONDO**********************-->
+var backColor = new Array(); // no cambiar
+backColor[0] = '#B00505';//ROJO CLARO
+backColor[1] = 'white';//blanco
+backColor[2] = '#30A4FC';//CELESTE
+backColor[3] = '#BDBDBD';//GRIS
+function changeBG(whichColor){
+document.bgColor = backColor[whichColor];
+}
+</script>
+
+<!-- ******************** FINALIZACION FUNCIONES JSCRIPT  **********************-->
+
+
+<!-- ******************** FUNCIONES JQUERY  **********************-->
+<script>
+<!-- 1.- agaranda imagen al colocarse sobre ella-->
+$(document).ready(function(){
+    $(".contenedor-imagen").mouseenter(function() {
+        $(this).find('img').animate({width:150,height:150,left:-25,top:-25});
+        $(this).find('img').rotate({animateTo:8});
+    }).mouseleave(function() {
+        $(this).find('img').animate({width:90,height:90,left:0,top:0});
+        $(this).find('img').rotate({animateTo:0});
+    });
+});
+</script>
+
+<!-- 2.- cambio de color barra de menu al pasar el mouse por el titulo-->
+<script>
+$(document).ready(function(){
+	$("#ta").mouseover(function(){  
+	$("#menu").attr("style","background:#37ADE9");
+	});  
+	$("#ta").mouseleave(function(){  
+		  $("#menu").attr("style","background:#E6E6E6");
+	});
+});
+</script>
+
+<!-- 3.- mensaje tooltip al colocarse sobre un boton-->
+<script>
+jQuery("a").mouseenter(function (e) {             
+	    var posMouse = e.pageX - this.offsetLeft; 
+	    var textoTooltip = jQuery(this).attr("title"); 
+	             
+	    if (textoTooltip.length > 0) {
+	        jQuery(this).append('<div class="tooltip">' + textoTooltip + '</div>');
+	        jQuery("a > div.tooltip").css("left", "" + posMouse - 103 + "px");
+	        jQuery("a > div.tooltip").fadeIn(300);
+	    }
+	});
+jQuery("a").mouseleave(function () {             
+    jQuery("a > div.tooltip").fadeOut(300).delay(300).queue(function () {
+        jQuery(this).remove();
+        jQuery(this).dequeue();
+    });
+});
+
+</script>
+
+<!-- 4. oculta y muestra elementos - -->
+
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $("#test").hide();
+    });  
+ $("#show").click(function(){
+       $("#test").show();
+    });
+});
+
+</script>
+
+<!-- 5. cambia de color los botones - -->
+<script>
+
+$(document).ready(function(){
+    $("#agre").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightblue");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightgray");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});
+
+</script>
+<!-- ******************** FINALIZACION FUNCIONES JQUERY **********************-->
+</head>
+
+<body>
+
+<!-- ********************inicio cabecera -->
+<div id="header">
+
+<div id="h1"> 
+ <div class="contenedor-imagen"><img src="anime.png" width= "90" alt="Imagen" /></div>
+</div>
+
+<div id="h2"> 
+<hgroup id="ta"> <h1>TIENDA &nbsp;&nbsp; AKATSUKI</h1> </hgroup>
+<div id="cambia"><h5>LO MEJOR EN ANIME...!!!</h5></div>
+</div>
+
+<div id="h3"> 
+<th><img id="imag" src="animes.png" width= "90" onclick="$('#imag').attr('src','anime.png');"></th>
+</div>
+
+  </div>
+<!-- ******************** fin cabecera -->
+
+<!-- ******************** inicio MENU -->
+
+<div id="menu">
+<table border="0">
+<tr>
+<td style="width: 120px"> <p><b>Inicio</b>&nbsp;&nbsp;</td>
+<td style="width: 120px" bgcolor="#FFBF00"><b>Productos</b>&nbsp;&nbsp;</td>
+<td style="width: 130px"><b>Novedades</b>&nbsp;&nbsp;</td>
+<td id="test" style="width: 110px"><b>Contantos</b>&nbsp;&nbsp;</td>
+</tr>
+</table>
+</div>
+
+<!-- ******************** fin MENU -->
+
+                 <!-- ******************** inicio cuerpo-->
+
+<!-- ******************** inicio seccion 1-->
+<div id="section1">
+<nav>
+<body link="white" vlink="white" alink="#4FA6EE"> <!-- cambia color link-->
+     <ul >
+          <li><a style="color: red" href="#">Series de Animes</a></li>
+          <li><a href="#" onMouseOver="javascript:changeBG(0)">Figuras y Llaveros</a></li>
+          <li><a href="#" onMouseOver="javascript:changeBG(2)">Ropa y Accesorios</a></li>
+          <li><a href="#" onMouseOver="javascript:changeBG(1)">Afiches y Murales</a></li>
+     </ul>
+</nav>
+<video controls="controls" widht="300" height="145">
+<source src="DBZ.webm" type="video/webm">
+</video>
+<section>
+<span onclick="alerta();"> <b>CLICLEA AKI</b></span>
+</section>
+
+
+<audio id="player" src="3 Doors Down - Here Without You.mp3">
+</audio>
+<div>
+    <button onclick="document.getElementById('player').play();">Play</button>
+    <button onclick="document.getElementById('player').pause();">Pausa</button>
+    <button onclick="document.getElementById('player').volume += 0.1;">+V</button>
+    <button onclick="document.getElementById('player').volume -= 0.1;">-V</button>
+</div>
+
+</div>
+<!-- ******************** fin seccion1-->
+
+<!-- ********************* inicio seccion 2 -->
+
+<div id="section2">
+<table id="t1" frame="void" border="1">
+<tr> 
+<th style="width: 100px"> <p>DRAGON BALL Z</p>  <img class="zoom" src="DBZ.jpg" width= "60" > <p>$120.00</p>
+<button id="agre" style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button></th>
+
+<th style="width: 100px"> <p>HELLSING</p> <img class="zoom" src="Hellsing.jpg" width= "60" ><p>$95.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button></th>
+
+<th style="width: 100px"> <p>NARUTO SHIPPUDEN</p> <img class="zoom" src="Naruto.jpg" width= "60" ><p>$125.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button></th>
+
+<th style="width: 100px"> <p>CABALLEROS DEL ZODIACO</p> <img class="zoom" src="Caballeros.jpg" width= "60" ><p>$55.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button></th>
+</tr>
+
+<tr>
+<th> <p>DEATH NOTE</p> <img class="zoom" src="Death.jpg" width= "60" ><p>$100.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button> </th>
+
+<th> <p>BLEACH</p> <img class="zoom" src="Bleach.jpg" width= "60" ><p>$80.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button> </th> 
+
+<th> <p>SUPER CAMPEONES</p> <img class="zoom" src="Campeones.jpg" width= "60" > <p>$105.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button> </th> 
+
+<th> <p>ATAQUE A LOS TITANES</p> <img class="zoom" src="Titan.jpg" width= "60" ><p>$75.00</p>
+<button style="color: #000000;" type="button" onclick="agregar();"><b>Agregar</b></button> </th> 
+</tr>
+</table>
+</div>
+
+
+<!-- ********************* fin seccion 2 -->
+
+<!-- ******************** inicio seccion 3-->
+
+<div id="section3">
+<p>  </p> 
+<div style="text-align:center;">
+<table frame="void" border="1">
+<tr> 
+<th><button style="color: #2E2EFE;" type="button" onclick="inicia();" title="Este boton sirve para mostrarte el uso del tooltip" 
+class="tooltip_elemento center"><img src="usua.png"> <b>Iniciar sesion</b></button>
+ <button id="show" style="color: #2E2EFE;" type="button" onclick="registro();"><img src="key.png"><b>Registrarse</b></button></th>
+</tr>
+</table>
+</div>
+
+<table frame="void" border="0">
+<tr> 
+<p>  </p>
+<td> <button id="btn" style="color: #2E2EFE;" type="button" onclick="aviso();"> <img src="carrito.png" width= "160"> </button> </td> 
+ </tr>
+ <tr>
+  
+<td style="width: 200px">Su carro esta vacio:</td>
+<td style="width: 200px"><img src="carrito1.png" width= "20" ></td>	
+</tr>
+
+<tr>
+<td style="width: 200px">Items en el carro:</td>
+<td style="width: 200px">0</td>
+</tr>
+
+<tr>
+<td style="width: 200px">Total:</td>  
+<td style="width: 200px">0.00$</td>
+</tr>
+ 
+<tr style="width: 200px">
+<td    ></td>
+<td> <p>  </p> <button style="color: purple;" type="button" onclick="vercesta();"><b>Ver Cesta</b></button> </td>
+</tr>
+</table>
+ <marquee style="color: red;"><p><b>SIGUENOS EN:</b></p></marquee>
+ <table>
+ <tr>
+ <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="zoom1" src="face.png" width= "40px" > </td>
+ <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="zoom1" src="insta.png" width= "30px" > </td>
+ <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="zoom1" src="Twiter.png" width= "30px" > </td>
+ <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="zoom1" src="google.png" width= "40px" > </td>
+ <td> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img class="zoom1" src="tube.png" width= "40px" > </td>
+ </tr>
+ </table>
+
+</div>
+<!-- ******************** fin seccion3-->
+<!-- BODY BACKGROUND="pantalla.jpg" -->
+ 
+<!-- ********************* inicio pie de pagina -->
+
+<div id="footer">
+Copyright © 2015 | Dario Tulmo | Derechos Reservados.
+<canvas id="myCanvas" width="5" height="5" style="border: 1px solid #c3c3c3;">
+</canvas>
+</div>
+<!-- ********************* fin pie de pagina -->
+
+</body>
+</html>

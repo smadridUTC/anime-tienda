@@ -1,0 +1,85 @@
+
+#h1{
+background-color: black;
+width: 120px;
+height: 100px;
+float: left;	
+}
+
+#h2{
+background-color: black;
+width: 1077px;
+height: 100px;
+float: left;	
+}
+
+#h3{
+background-color: black;
+width: 120px;
+height: 100px;	
+float: right;
+}
+
+#menu{
+line-height: 5px;
+font-family: Cambria;
+background-color: #E6E6E6;
+color: black;
+text-align: center;
+padding: 5px;
+width: 1333px;
+height: 32px;
+font-family: Cambria;
+font-size: 16px;
+}
+
+#section1{
+line-height: 30px;
+font-family: Cambria;
+background-color: black;
+text-align: center;
+color: white;
+height: 400px;
+width: 260px;
+float: left;
+padding: 5px;
+}
+
+#section2{
+background-color: white;
+width: 700px;
+height: 400px;
+float: left;
+padding: 5px;
+}
+
+#t1{
+font-family: Cambria;
+color:#0080FF;
+font-size: 11px;
+text-align: center;
+width: 703px;
+height: 400px;
+}
+
+
+#section3{
+background-color: black;
+font-family: Cambria;
+color: white;
+text-align: center;
+width: 337px;
+height: 400px;
+float: right;
+padding: 5px;
+}
+
+#footer{
+background-color: #F3F781;
+font-family: Cambria;
+font-size: 11px;
+color: black;
+clear: both;
+text-align: left;
+padding: 5px;
+}

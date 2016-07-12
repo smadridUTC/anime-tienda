@@ -1,0 +1,62 @@
+
+.contenedor-imagen{
+    width:90px;
+    height:90px;
+    float:left;
+    overflow:hidden;
+    border:1px solid #ddd;
+    margin:15px;
+    border: 1px solid #ddd;
+    text-align:center;
+}
+ 
+.contenedor-imagen img{
+    position: relative;
+}
+
+.tooltip_elemento {
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    width: 200px;    
+    padding: 10px;
+    margin: 0 0 12px 0;    
+    z-index: 100;
+    bottom: 100%;
+    background: #FDD017;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.zoom{
+		transition: 1.5s ease;
+ 		-moz-transition: 1.5s ease; /* Firefox */
+ 		-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 		-o-transition: 1.5s ease; /* Opera */
+	}
+	.zoom:hover{
+		transform : scale(3);
+		-moz-transform : scale(3); /* Firefox */
+		-webkit-transform : scale(3); /* Chrome - Safari */
+		-o-transform : scale(3); /* Opera */
+		-ms-transform : scale(3); /* IE9 */
+	}
+
+.zoom1{
+		transition: 1.5s ease;
+ 		-moz-transition: 1.5s ease; /* Firefox */
+ 		-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 		-o-transition: 1.5s ease; /* Opera */
+	}
+	.zoom1:hover{
+		transform : scale(2);
+		-moz-transform : scale(2); /* Firefox */
+		-webkit-transform : scale(2); /* Chrome - Safari */
+		-o-transform : scale(2); /* Opera */
+		-ms-transform : scale(2); /* IE9 */
+	}
